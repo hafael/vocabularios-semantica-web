@@ -1,0 +1,23 @@
+# Dados de Persistência (Docker Volumes)
+# Ignoramos as pastas pois elas contêm os bancos de dados e projetos locais
+fuseki-data/
+webprotege-data/
+mongo-data/
+
+# Configurações Sensíveis
+# O .env contém senhas e não deve ser versionado
+.env
+
+# Arquivos de Sistema
+.DS_Store
+Thumbs.db
+*.swp
+*.log
+
+# Editores de Código
+.vscode/
+.idea/
+
+# Gemini CLI / IA Context
+.gemini/
+tool-outputs/

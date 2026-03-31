@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Sobre o Projeto - Ambiente Semântico Web</title>
+    <style>
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; color: #333; max-width: 900px; margin: 0 auto; padding: 40px; background-color: #f9f9f9; }
+        .card { background: white; padding: 30px; border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.05); margin-bottom: 30px; }
+        h1, h2 { color: #2c3e50; }
+        .tech-list { display: flex; flex-wrap: wrap; gap: 10px; list-style: none; padding: 0; }
+        .tech-tag { background: #e8f4fd; color: #2980b9; padding: 5px 12px; border-radius: 20px; font-size: 0.9em; font-weight: bold; }
+        .academic-info { border-left: 4px solid #2980b9; padding-left: 20px; font-style: italic; color: #555; }
+        footer { text-align: center; color: #7f8c8d; font-size: 0.9em; margin-top: 40px; }
+        .back-link { display: inline-block; margin-bottom: 20px; text-decoration: none; color: #2980b9; font-weight: bold; }
+    </style>
+</head>
+<body>
+
+    <a href="index.html" class="back-link">← Voltar para o Início</a>
+
+    <div class="card">
+        <h1>Sobre o Ambiente de Desenvolvimento</h1>
+        <div class="academic-info">
+            <p><strong>Universidade Federal Fluminense (UFF)</strong><br>
+            Curso de Biblioteconomia e Documentação<br>
+            Disciplina: Vocabulários e Semântica na Web (GCI00189)<br>
+            Responsável: Profª. Drª. Rosana Portugal Tavares de Moraes</p>
+        </div>
+        
+        <p>Este projeto foi concebido para automatizar e simplificar a configuração de um laboratório de Web Semântica. Em vez de instalações complexas e manuais, o ambiente utiliza <strong>Docker</strong> para orquestrar serviços de triplestore e editores de ontologias de forma isolada e persistente.</p>
+    </div>
+
+    <div class="card">
+        <h2>🛠️ Tecnologias Utilizadas</h2>
+        <ul class="tech-list">
+            <li class="tech-tag">Docker & Docker Compose</li>
+            <li class="tech-tag">Apache Jena Fuseki (Triplestore)</li>
+            <li class="tech-tag">WebProtégé (Editor de Ontologias)</li>
+            <li class="tech-tag">MongoDB (Persistência)</li>
+            <li class="tech-tag">Bash/Batch (Automação)</li>
+            <li class="tech-tag">SPARQL / RDF / Turtle</li>
+        </ul>
+    </div>
+
+    <div class="card">
+        <h2>📂 Estrutura de Diretórios</h2>
+        <p>O ambiente foi desenhado para manter os dados separados do sistema, permitindo backups fáceis:</p>
+        <ul>
+            <li><strong>fuseki-data/</strong>: Onde residem os bancos de dados TDB2 e arquivos de configuração de usuários.</li>
+            <li><strong>webprotege-data/</strong>: Pasta para os arquivos de projetos de ontologias criados no WebProtégé.</li>
+            <li><strong>mongo-data/</strong>: Banco de dados interno do WebProtégé para gerenciar usuários e metadados.</li>
+            <li><strong>scripts/</strong>: Automação para setup e permissões de sistema.</li>
+        </ul>
+    </div>
+
+    <div class="card">
+        <h2>🎓 Objetivos Pedagógicos</h2>
+        <p>O objetivo principal é permitir que o aluno foque na <strong>modelagem conceitual e estrutural</strong> de dados semânticos, sem se preocupar com as barreiras técnicas de instalação de servidores Java ou gerenciamento de bancos de dados.</p>
+    </div>
+
+    <div class="card" style="border-top: 5px solid #64ffda;">
+        <h2>🤖 Co-desenvolvimento com IA</h2>
+        <p>Este ambiente de desenvolvimento foi projetado e implementado em parceria com o assistente de inteligência artificial <strong>Gemini CLI</strong>.</p>
+        <p>A arquitetura dos containers, scripts de automação e toda a documentação foram gerados e refinados utilizando os modelos <strong>Gemini 2.0 Flash</strong> (para execução rápida e precisa) e <strong>Gemini 1.5 Pro</strong> (para planejamento estrutural e raciocínio complexo).</p>
+    </div>
+
+    <footer>
+        Desenvolvido por Rafael Villa Verde &copy; 2026. Licença MIT.
+    </footer>
+
+</body>
+</html>
