@@ -1,0 +1,14 @@
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix ex: <http://minhaaula.org/id/> .
+ 
+# O ALICERCE: Criando o conceito de "Naturalismo"
+ex:Naturalismo a skos:Concept ;
+    skos:prefLabel "Naturalismo"@pt ;
+    skos:altLabel "Escola de Zola"@pt .
+ 
+# A PONTE: Catalogando um livro e ligando ao conceito
+ex:livro001 a dc:Text ;
+    dc:title "O Cortiço" ;
+    dc:creator "Aluísio Azevedo" ;
+    dc:subject ex:Naturalismo .

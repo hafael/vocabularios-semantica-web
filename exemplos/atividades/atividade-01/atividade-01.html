@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade 01: Instalação e Configuração - Laboratório Semântico</title>
+    <style>
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; color: #333; max-width: 900px; margin: 0 auto; padding: 20px; background-color: #f8f9fa; }
+        header { background: #2c3e50; color: white; padding: 30px; border-radius: 8px; margin-bottom: 30px; text-align: center; }
+        .exercise-box { background: white; padding: 25px; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); margin-bottom: 25px; border-top: 5px solid #2980b9; }
+        .exercise-box h2 { color: #2980b9; margin-top: 0; }
+        .step { margin-bottom: 20px; padding-bottom: 15px; border-bottom: 1px solid #eee; }
+        .step:last-child { border-bottom: none; }
+        .step h3 { margin-top: 0; color: #34495e; font-size: 1.1em; }
+        .badge { display: inline-block; padding: 3px 8px; background: #e8f4fd; color: #2980b9; border-radius: 4px; font-size: 0.85em; font-weight: bold; margin-bottom: 10px; }
+        code { background: #f0f0f0; padding: 2px 5px; border-radius: 3px; font-family: 'Consolas', monospace; }
+        .checkpoint { background: #e8f4fd; padding: 15px; border-radius: 6px; border-left: 4px solid #3498db; margin-top: 10px; font-size: 0.95em; }
+        .btn-home { display: inline-block; margin-top: 20px; padding: 10px 15px; background: #95a5a6; color: white; text-decoration: none; border-radius: 4px; }
+        .btn-home:hover { background: #7f8c8d; }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Atividade 01: Configuração do Laboratório</h1>
+    <p>Preparação do ambiente de trabalho para a Web Semântica</p>
+</header>
+
+<div class="exercise-box">
+    <h2>Objetivo</h2>
+    <p>Instalar as ferramentas necessárias e iniciar os servidores (Fuseki e WebProtégé) que serão utilizados durante todo o curso.</p>
+</div>
+
+<div class="exercise-box">
+    <h2>Passo a Passo</h2>
+
+    <div class="step">
+        <span class="badge">Tarefa 1</span>
+        <h3>Obter os arquivos do projeto</h3>
+        <p>Baixe o repositório do projeto no GitHub como um arquivo ZIP e extraia em uma pasta de fácil acesso (ex: <code>C:\TrabalhoSemantico</code> no Windows ou <code>~/Documents/TrabalhoSemantico</code> no macOS).</p>
+    </div>
+
+    <div class="step">
+        <span class="badge">Tarefa 2</span>
+        <h3>Instalar o Motor (Docker Desktop)</h3>
+        <p>Instale o <strong>Docker Desktop</strong>. Se você usa Windows, certifique-se de que o <strong>WSL 2</strong> está atualizado conforme as instruções do manual.</p>
+        <div class="checkpoint"><strong>DICA:</strong> O Docker deve estar aberto e exibindo o ícone da baleia verde na barra de tarefas antes de prosseguir.</div>
+    </div>
+
+    <div class="step">
+        <span class="badge">Tarefa 3</span>
+        <h3>Ferramentas de Edição</h3>
+        <p>Instale o <strong>Visual Studio Code</strong> e o <strong>MarcEdit 7</strong>.</p>
+    </div>
+
+    <div class="step">
+        <span class="badge">Tarefa 4</span>
+        <h3>Subir os Servidores</h3>
+        <p>No Windows, execute o arquivo <code>start.bat</code>. No macOS, use o terminal para rodar o <code>./start.sh</code>.</p>
+        <div class="checkpoint"><strong>CHECKPOINT:</strong> Aguarde a mensagem <code>Ambiente pronto!</code> no terminal.</div>
+    </div>
+
+    <div class="step">
+        <span class="badge">Tarefa 5</span>
+        <h3>Configuração de Administrador do WebProtégé</h3>
+        <p>Abra o terminal e execute o comando para criar sua conta administrativa:</p>
+        <p><code>docker exec -it webprotege java -jar /webprotege-cli.jar create-admin-account</code></p>
+        <p>Siga as instruções na tela para definir seu e-mail e senha.</p>
+    </div>
+
+    <div class="step">
+        <span class="badge">Tarefa 6</span>
+        <h3>Validação Final</h3>
+        <p>Acesse as interfaces e verifique se o login funciona:</p>
+        <ul>
+            <li><strong>Fuseki:</strong> <a href="http://localhost:3030" target="_blank">http://localhost:3030</a> (admin/admin)</li>
+            <li><strong>WebProtégé:</strong> <a href="http://localhost:5000" target="_blank">http://localhost:5000</a> (com a conta que você criou)</li>
+        </ul>
+    </div>
+</div>
+
+<div class="exercise-box">
+    <h2>Entrega</h2>
+    <p>Ao finalizar, mostre ao professor as duas interfaces abertas no seu navegador e os indicadores de status "Online" no arquivo <code>instrucoes.html</code>.</p>
+</div>
+
+<a href="../../../atividades.html" class="btn-home">← Voltar para Atividades</a>
+
+</body>
+</html>
