@@ -1,6 +1,8 @@
 # TÓPICOS ESPECIAIS EM BIBLIOTECONOMIA III
 ## Vocabulários e Semântica na Web (GCI00189)
 
+### [Acesse a página do projeto aqui](https://hafael.github.io/vocabularios-semantica-web/)
+
 ### Ambiente de desenvolvimento dos exercícios da disciplina
 
 **Universidade Federal Fluminense - UFF**  
