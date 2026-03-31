@@ -6,7 +6,7 @@ mongo-data/
 
 # Configurações Sensíveis
 # O .env contém senhas e não deve ser versionado
-.env
+# .env
 
 # Arquivos de Sistema
 .DS_Store

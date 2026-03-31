@@ -145,10 +145,26 @@
         <tr><th>Acesso</th><th>Usuário</th><th>Senha</th></tr>
         <tr><td>Administrador Inicial</td><td><code>admin</code></td><td><code>admin</code></td></tr>
     </table>
-    <p style="margin-top: 15px; font-size: 0.9em; color: #666;">
-        💡 <strong>Recuperação Manual:</strong> Se a conta não for criada automaticamente, você pode tentar forçar a criação digitando este comando no terminal (com os servidores ligados): <br>
-        <code>docker exec -it webprotege java -jar /webprotege-cli.jar create-admin-account</code>
-    </p>
+</div>
+
+<div class="step">
+    <h2>6. Concluindo a Configuração Inicial (Setup)</h2>
+    <p>Conforme a <a href="https://github.com/protegeproject/webprotege/wiki/WebProt%C3%A9g%C3%A9-Deployment-via-Docker" target="_blank">documentação oficial</a>, após iniciar o servidor pela primeira vez, é necessário configurar a conta de administrador e as permissões globais.</p>
+    
+    <ol>
+        <li><strong>Acessar o Terminal:</strong> Com os servidores ligados, abra o Terminal (macOS) ou PowerShell/CMD (Windows).</li>
+        <li><strong>Criar Conta de Administrador:</strong> Execute o comando abaixo para iniciar o assistente de criação de conta no banco de dados do WebProtégé: <br>
+            <code style="background: #2c3e50; color: #64ffda; padding: 8px 15px; border-radius: 4px; font-size: 1.1em; display: inline-block; margin: 10px 0; font-family: 'Consolas', monospace; border: 1px solid #3498db;">docker exec -it webprotege java -jar /webprotege-cli.jar create-admin-account</code>
+        </li>
+        <li><strong>Siga os Prompts:</strong> O sistema solicitará um <strong>Nome de Usuário</strong>, <strong>Endereço de E-mail</strong> e <strong>Senha</strong>. Preencha e confirme.</li>
+        <li><strong>Configurações Globais:</strong> Faça login no WebProtégé e acesse o menu de configurações da aplicação em: <br>
+            <a href="http://localhost:5000/#application/settings" target="_blank" style="font-weight: bold; color: #2980b9;">http://localhost:5000/#application/settings</a>
+        </li>
+        <li><strong>Permissões:</strong> Preencha os campos obrigatórios e marque todos os itens na seção <strong>"Permission" (Permissões)</strong> para garantir acesso administrativo total.</li>
+    </ol>
+    <div style="background: #e8f4fd; padding: 10px; border-radius: 4px; border-left: 4px solid #3498db; margin-top: 10px;">
+        <p style="margin: 0; font-size: 0.9em;"><strong>Nota:</strong> Esta etapa é crucial para que você possa criar novos projetos e gerenciar usuários no seu laboratório semântico.</p>
+    </div>
 </div>
 
 <div class="step" style="border: 2px solid #e74c3c; background: #fff5f5;">
@@ -236,7 +252,7 @@
 
     <div style="margin-bottom: 15px;">
         <p><strong>4. Minha senha admin/admin não funciona no WebProtégé.</strong><br>
-        Isso ocorre se a automação falhar na primeira subida. Tente o comando de <strong>Recuperação Manual</strong> descrito no Passo 5 deste manual. Se ainda assim falhar, use o script de <strong>Reset</strong> e tente novamente.</p>
+        Isso ocorre se a automação falhar na primeira subida. Siga os passos de <strong>Configuração Inicial (Setup)</strong> descritos no <strong>Passo 6</strong> deste manual para criar sua conta de administrador manualmente. Se ainda assim falhar, use o script de <strong>Reset</strong> e tente novamente.</p>
     </div>
 
     <div style="margin-bottom: 15px;">

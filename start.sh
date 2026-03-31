@@ -24,7 +24,7 @@ docker-compose up -d
 # 3. Automação da conta Admin do WebProtégé
 # Aguarda o container estar pronto
 echo "Aguardando inicialização do WebProtégé para criar conta admin..."
-sleep 15
+sleep 30
 
 # Verifica se o admin já existe (tentando criar e ignorando se falhar por já existir)
 echo -e "${WEBPROTEGE_ADMIN_USER}\n${WEBPROTEGE_ADMIN_EMAIL}\n${WEBPROTEGE_ADMIN_PASS}\n${WEBPROTEGE_ADMIN_PASS}" | \
